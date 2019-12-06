@@ -39,14 +39,19 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your Team Lead.
 
 - [ ] Mention two parts of Express that you learned about this week.
-
+    -Express is a framework for JavaScript to setup servers to use RESTful API and Express also allows use various middleware which gives it tremendous flexibility in development.
+    
 - [ ] Describe Middleware?
+    -Middleware are set of functions that are operate using server usage. They provide additional functionality for the server when handling requests.
 
 - [ ] Describe a Resource?
+    -Resource is a piece of data that is managed inside of database, servers send resources back and forth to engage with database with updating.
 
 - [ ] What can the API return to help clients know if a request was successful?
+    -API returns status codes that lets clients know what happen with their request to the server. Status 200 means the request was acknowledged by the server and it may return a response in form of a Resource.
 
 - [ ] How can we partition our application into sub-applications?
+    --Yes, we can use Express ability for Routing so certain applications so it becomes easier to manage without just having single file containing every functionality of the server.
 
 ## Minimum Viable Product
 

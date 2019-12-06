@@ -19,6 +19,8 @@ router.get('/', (req, res) => {
 });
 
 
+
+
 function validateActionId(req, res, next) {
     const { id } = req.params;
     Action.get(id)

@@ -18,7 +18,21 @@ router.get('/', (req, res) => {
         })
 });
 
-
+router.get('/:id', validateActionId, (req, res) => {
+    const { id } = req.params;
+    Action.get(id)
+        .then(action => {
+            res
+                .status(200)
+                .json(action)
+        })
+        .catch(error => {
+            console.log(error);
+            res
+                .status(500)
+                .json({error:"There was a problem reaching the server."})
+        })
+});
 
 
 function validateActionId(req, res, next) {

@@ -1,4 +1,6 @@
 const express = require('express');
+const actionRouter = require('./data/actions/actionRouter');
+const projectRouter = require('./data/projects/projectRouter');
 const cors = require('cors');
 
 const server = express();
@@ -6,7 +8,8 @@ const server = express();
 server.use(express.json());
 server.use(cors());
 server.use(logger);
-
+server.use('/api/actions', actionRouter);
+server.use('/api/projects', projectRouter);
 
 const port = process.env.PORT || 4444;
 

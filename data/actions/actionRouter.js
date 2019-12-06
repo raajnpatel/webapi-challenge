@@ -81,7 +81,7 @@ router.put('/:id', validateActionId, (req, res) => {
         })
 });
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', validateActionId, (req, res) => {
     const { id } = req.params;
     Action.remove(id)
         .then(removed => {

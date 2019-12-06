@@ -81,7 +81,7 @@ router.put('/:id', validateProjectId, (req, res) => {
         })
 });
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', validateProjectId, (req, res) => {
     const { id } = req.params;
     Project.remove(id)
         .then(removed => {
